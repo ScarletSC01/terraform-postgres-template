@@ -17,6 +17,7 @@ resource "google_sql_database_instance" "postgres_instance" {
   name             = "pg-instance"
   region           = var.region
   database_version = "POSTGRES_14"
+  deletion_protection = false
  
   settings {
     tier = "db-f1-micro"
